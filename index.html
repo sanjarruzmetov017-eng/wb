@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Battle Pro - Chess.com Style</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Inter:wght@400;600;700&display=swap');
+        
+        body {
+            background-color: #262421;
+            background-image: radial-gradient(circle at top right, #312e2b, #262421);
+            color: #bababa;
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+        }
+
+        h1, h2, h3, .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .chess-sidebar-item {
+            color: #bababa;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .chess-sidebar-active {
+            background: linear-gradient(90deg, rgba(129, 182, 76, 0.3) 0%, rgba(129, 182, 76, 0) 100%);
+            color: #fff;
+            border-left: 6px solid #81b64c;
+        }
+
+        .chess-btn-primary {
+            background: linear-gradient(180deg, #95bb4a 0%, #81b64c 100%);
+            color: white;
+            box-shadow: 0 6px 0 0 #4e7a2b, 0 15px 30px rgba(0,0,0,0.4);
+            transition: all 0.1s ease;
+        }
+        .chess-btn-primary:active {
+            transform: translateY(4px);
+            box-shadow: 0 2px 0 0 #4e7a2b;
+        }
+
+        .gradient-blitz { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); }
+        .gradient-rapid { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
+        .gradient-ai { background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); }
+
+        .glass-panel {
+            background: rgba(43, 41, 38, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .glow-timer {
+            box-shadow: 0 0 30px rgba(129, 182, 76, 0.4);
+            border: 3px solid #81b64c;
+        }
+
+        @keyframes slide-up {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-slide-up {
+            animation: slide-up 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        @keyframes move-anim {
+            from { opacity: 0; transform: scale(0.8) translateY(20px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        .move-anim {
+            animation: move-anim 0.3s ease-out forwards;
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #45413e; border-radius: 10px; border: 2px solid #262421; }
+        ::-webkit-scrollbar-thumb:hover { background: #81b64c; }
+        
+        .custom-scrollbar {
+            scrollbar-width: thin;
+            scrollbar-color: #45413e transparent;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>

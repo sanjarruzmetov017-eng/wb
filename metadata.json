@@ -1,0 +1,8 @@
+{
+  "name": "Word Battle Pro",
+  "description": "A feature-rich word battle application inspired by Chess.com, featuring real-time battles, AI opponents, ELO rankings, and social features.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
